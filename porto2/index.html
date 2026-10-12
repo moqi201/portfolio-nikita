@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita | Portfolio</title>
+    
+    <!-- Google Fonts: Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Devicon CDN for Tech Stack Logos -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    
+    <!-- FontAwesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            dark: '#3368A0',
+                            light: '#66A3BF',
+                        },
+                        accent: '#C8DFDB',
+                        base: '#F2EFE7'
+                    },
+                    fontFamily: {
+                        serif: ['Lora', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-base text-primary-dark font-serif antialiased overflow-x-hidden selection:bg-primary-light selection:text-white">
+
+    <!-- HERO SECTION -->
+    <!-- HERO SECTION (Diperbarui dengan Foto) -->
+    <header class="relative w-full min-h-screen flex flex-col md:flex-row items-center px-6 md:px-12 lg:px-24 pt-20 pb-10">
+        
+        <!-- Kolom Kiri: Teks -->
+        <div class="w-full md:w-1/2 flex flex-col justify-center items-start text-left z-10">
+            <!-- Wrapper untuk animasi teks hero -->
+            <div class="overflow-hidden py-2">
+                <h1 class="text-6xl md:text-7xl lg:text-9xl font-bold tracking-tight hero-reveal text-primary-dark">
+                    NIKITA.
+                </h1>
+            </div>
+            <div class="overflow-hidden mt-4">
+                <p class="text-xl md:text-2xl text-primary-light font-medium hero-reveal-delay">
+                    Web & Mobile App Developer
+                </p>
+            </div>
+            
+            <div class="mt-8 overflow-hidden">
+                 <p class="text-lg text-gray-600 max-w-md hero-reveal-delay" style="animation-delay: 0.5s;">
+                   Mengubah ide kreatif menjadi aplikasi web dan mobile yang intuitif, responsif, serta siap memberikan dampak nyata. Dengan pengalaman dalam pengembangan antarmuka web dan aplikasi mobile, saya berkomitmen untuk menghadirkan solusi digital yang inovatif dan efektif.
+                 </p>
+            </div>
+
+            <!-- Tombol CTA (Opsional, tapi bagus untuk portofolio) -->
+            <div class="mt-10 hero-reveal-delay" style="animation-delay: 0.7s;">
+                <a href="#works" class="inline-block px-8 py-4 bg-primary-dark text-white rounded-full font-medium hover:bg-primary-light transition duration-300 transform hover:-translate-y-1 shadow-lg">
+                    Eksplorasi Lebih Lanjut
+                </a>
+            </div>
+        </div>
+
+        <!-- Kolom Kanan: Foto Profil & Elemen Melayang -->
+      <!-- Kolom Kanan: Foto Profil (Polaroid Stack) -->
+        <div class="w-full md:w-1/2 mt-20 md:mt-0 flex justify-center md:justify-end items-center relative hero-reveal-delay" style="animation-delay: 0.4s;">
+            
+            <!-- Dekorasi latar belakang glow -->
+            <div class="absolute w-[300px] h-[400px] md:w-[400px] md:h-[500px] bg-accent/30 rounded-full -z-10 blur-3xl transform translate-x-10 -translate-y-10"></div>
+        
+
+            <!-- KONTENER POLAROID STACK -->
+            <div class="relative w-56 h-72 md:w-72 md:h-96 mr-0 md:mr-10" id="polaroid-stack">
+                
+                <!-- 1. Foto Belakang -->
+                <div class="polaroid-item cursor-pointer absolute inset-0 bg-white p-3 pb-12 shadow-md transform -rotate-12 -translate-x-8 translate-y-6 z-0 transition-all duration-500 hover:-rotate-12 hover:-translate-x-12 hover:translate-y-4">
+                    <img src="./assets/images/2.jpg" 
+                         alt="Polaroid Background 1" class="w-full h-full object-cover bg-gray-200">
+                </div>
+
+                <!-- 2. Foto Tengah -->
+                <div class="polaroid-item cursor-pointer absolute inset-0 bg-white p-3 pb-12 shadow-lg transform rotate-12 translate-x-8 -translate-y-4 z-10 transition-all duration-500 hover:rotate-12 hover:translate-x-12 hover:-translate-y-6">
+                    <img src="./assets/images/image.png" 
+                         alt="Polaroid Background 2" class="w-full h-full object-cover bg-gray-200">
+                </div>
+
+                <!-- 3. Foto Depan Utama -->
+                <div class="polaroid-item cursor-pointer absolute inset-0 bg-white p-3 pb-12 shadow-2xl transform z-20 transition-all duration-500 hover:scale-105">
+                    <img src="./assets/images/foto2.jpg" 
+                         alt="Polaroid Front" class="w-full h-full object-cover bg-gray-200">
+                    <div class="absolute bottom-3 left-0 right-0 text-center opacity-70">
+                        <span class="font-serif italic text-gray-600 text-sm md:text-base">Hello, it's me!</span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- ELEMEN MELAYANG 2: Kartu Info Mini (Di Kanan Bawah) -->
+            <div class="absolute -right-2 md:-right-8 bottom-0 md:bottom-8 bg-white/80 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/50 flex items-center gap-4 z-30 floating-element" style="animation-delay: 1.5s;">
+                <div class="bg-accent/40 w-10 h-10 rounded-full flex justify-center items-center text-primary-dark">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div>
+                    <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Fokus Utama</p>
+                    <p class="text-sm font-bold text-primary-dark">Web & Mobile App</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- Indikator Scroll Down -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+            <a href="#about">
+                <i class="fa-solid fa-arrow-down text-2xl text-primary-light hover:text-primary-dark transition"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="py-24 px-6 md:px-12 max-w-6xl mx-auto">
+            <div class="bg-accent/40 rounded-3xl p-10 md:p-16 text-center shadow-sm" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-3xl md:text-5xl font-bold mb-8 text-primary-dark">About Me</h2>
+                <p class="text-lg md:text-xl leading-relaxed mb-12 max-w-4xl mx-auto">
+                    Hi, I'm Nikita Aidina Hidayat! Mahasiswi Teknik Informatika Universitas Pamulang & Web/App Development Enthusiast. Berfokus pada pengembangan antarmuka web yang fleksibel serta aplikasi mobile berbasis teknologi modern. Siap belajar, berkolaborasi, dan membangun aplikasi yang memberikan dampak nyata.
+                </p>
+                
+                <!-- Tech Stack Logos -->
+                <h3 class="text-lg font-semibold text-primary-light mb-6 tracking-widest uppercase">Tech Stack</h3>
+                <div class="flex flex-wrap justify-center gap-8 text-5xl text-primary-dark">
+                    <i class="devicon-html5-plain hover:text-primary-light transition duration-300 transform hover:-translate-y-2 cursor-pointer" title="HTML5"></i>
+                    <i class="devicon-css3-plain hover:text-primary-light transition duration-300 transform hover:-translate-y-2 cursor-pointer" title="CSS3"></i>
+                    <i class="devicon-tailwindcss-original hover:text-primary-light transition duration-300 transform hover:-translate-y-2 cursor-pointer" title="Tailwind CSS"></i>
+                    <i class="devicon-laravel-original hover:text-primary-light transition duration-300 transform hover:-translate-y-2 cursor-pointer" title="Laravel"></i>
+                    <i class="devicon-flutter-plain hover:text-primary-light transition duration-300 transform hover:-translate-y-2 cursor-pointer" title="Flutter"></i>
+                    <i class="devicon-dart-plain hover:text-primary-light transition duration-300 transform hover:-translate-y-2 cursor-pointer" title="Dart"></i>
+                </div>
+            </div>
+        </section>
+
+       
+        <!-- SELECTED WORKS SECTION (4 GRID) -->
+        <section id="works" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16" data-aos="fade-up">
+                <div>
+                    <h2 class="text-4xl md:text-6xl font-bold text-primary-dark">Experience & Certifications</h2>
+                    <p class="text-primary-light mt-4 text-lg">Eksplorasi proyek dan karya .</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                
+                <!-- Project Card 1 -->
+                <article class="group bg-accent/20 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-3" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Slideshow Container -->
+                    <div class="relative w-full h-80 overflow-hidden bg-gray-200 slideshow-container" data-slide-index="0">
+                        <!-- Slides Wrapper (Flex container for horizontal scrolling) -->
+                        <div class="slides-wrapper flex w-full h-full transition-transform duration-500 ease-in-out">
+                            <!-- Slide 1 -->
+                            <div class="slide min-w-full h-full overflow-hidden">
+                                <img src="./assets/images/pelatihan2.jpg" alt="Project 1 - Img 1" class="w-full h-full object-cover transform hover:scale-110 transition duration-700 ease-in-out cursor-zoom-in">
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="slide min-w-full h-full overflow-hidden">
+                                <img src="./assets/images/pelatihan.jpeg" alt="Project 1 - Img 2" class="w-full h-full object-cover transform hover:scale-110 transition duration-700 ease-in-out cursor-zoom-in">
+                            </div>
+                            <!-- Slide 3 -->
+                            <!-- <div class="slide min-w-full h-full overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000&auto=format&fit=crop" alt="Project 1 - Img 3" class="w-full h-full object-cover transform hover:scale-110 transition duration-700 ease-in-out cursor-zoom-in">
+                            </div> -->
+                        </div>
+
+                        <!-- Navigation Arrows -->
+                        <button class="prev-btn absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white text-primary-dark rounded-full w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 shadow-md">
+                            <i class="fa-solid fa-chevron-left text-sm"></i>
+                        </button>
+                        <button class="next-btn absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white text-primary-dark rounded-full w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 shadow-md">
+                            <i class="fa-solid fa-chevron-right text-sm"></i>
+                        </button>
+
+                        <!-- Dots Indicators -->
+                        <div class="dots-container absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+                            <span class="dot w-2 h-2 rounded-full bg-white/50 active-dot transition-colors duration-300"></span>
+                            <span class="dot w-2 h-2 rounded-full bg-white/50 transition-colors duration-300"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8 bg-white/50 backdrop-blur-sm cursor-default">
+                        <span class="text-sm font-semibold text-primary-light tracking-wider uppercase">MOBILE APP DEVELOPMENT</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-3 text-primary-dark group-hover:text-primary-light transition duration-300">Pelatihan Mobile Programming</h3>
+                        <p class="text-gray-700 line-clamp-3">Mengikuti Pelatihan kerja Mobile Programming dengan instruktur berpengalaman di bidang mobile development selama 45 hari bertempat di PPKD Jakarta Pusat</p>
+                    </div>
+                </article>
+
+                <!-- Project Card 2 -->
+                <article class="group bg-accent/20 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative w-full h-80 overflow-hidden bg-gray-200 slideshow-container" data-slide-index="0">
+                        <div class="slides-wrapper flex w-full h-full transition-transform duration-500 ease-in-out">
+                            <div class="slide min-w-full h-full overflow-hidden">
+                                <img src="./assets/images/sertifikasi.jpg" alt="Project 2 - Img 1" class="w-full h-full object-cover transform hover:scale-110 transition duration-700 ease-in-out cursor-zoom-in">
+                            </div>
+                            <div class="slide min-w-full h-full overflow-hidden">
+                                <img src="./assets/images/sertifikasi2.jpg" alt="Project 2 - Img 2" class="w-full h-full object-cover transform hover:scale-110 transition duration-700 ease-in-out cursor-zoom-in">
+                            </div>
+                        </div>
+
+                        <button class="prev-btn absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white text-primary-dark rounded-full w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 shadow-md"><i class="fa-solid fa-chevron-left text-sm"></i></button>
+                        <button class="next-btn absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-white text-primary-dark rounded-full w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 shadow-md"><i class="fa-solid fa-chevron-right text-sm"></i></button>
+
+                        <div class="dots-container absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+                            <span class="dot w-2 h-2 rounded-full bg-white/50 active-dot transition-colors duration-300"></span>
+                            <span class="dot w-2 h-2 rounded-full bg-white/50 transition-colors duration-300"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8 bg-white/50 backdrop-blur-sm cursor-default">
+                        <span class="text-sm font-semibold text-primary-light tracking-wider uppercase">Sertifikasi Mobile Programming</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-3 text-primary-dark group-hover:text-primary-light transition duration-300">Aplikasi Absensi</h3>
+                        <p class="text-gray-700 line-clamp-3">Melakukan Sertifikasi Mobile Programming dengan instruktur berpengalaman di bidang mobile development selama 45 hari bertempat di PPKD Jakarta Pusat</p>
+                    </div>
+                </article>
+
+                <!-- (Terapkan struktur 'slideshow-container' yang sama untuk Project Card 3 dan 4) -->
+                <!-- Project Card 3 -->
+                <article class="group bg-accent/20 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative w-full h-80 overflow-hidden bg-gray-200 slideshow-container" data-slide-index="0">
+                        <div class="slides-wrapper flex w-full h-full transition-transform duration-500 ease-in-out">
+                            <div class="slide min-w-full h-full overflow-hidden">
+                                <img src="./assets/images/TIH.jpg" alt="Project 3" class="w-full h-full object-cover transform hover:scale-110 transition duration-700 ease-in-out cursor-zoom-in">
+                            </div>
+                        </div>
+                        <!-- Hanya 1 foto, tombol nav dan dots bisa dihilangkan atau biarkan script yang handle (tombol tidak akan berefek) -->
+                    </div>
+                    <div class="p-8 bg-white/50 backdrop-blur-sm cursor-default">
+                        <span class="text-sm font-semibold text-primary-light tracking-wider uppercase">PROGRAM</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-3 text-primary-dark group-hover:text-primary-light transition duration-300">Talent & Innovation Hub (TIH) BPKK Bekasi</h3>
+                        <p class="text-gray-700 line-clamp-3">Aktif berpartisipasi sebagai peserta dalam program pengembangan bakat dan inovasi teknologi, berfokus pada kolaborasi, riset ide solusi digital, dan peningkatan keterampilan teknis.</p>
+                    </div>
+                </article>
+
+                <!-- Project Card 4 -->
+                <article class="group bg-accent/20 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 transform hover:-translate-y-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative w-full h-80 overflow-hidden bg-gray-200 slideshow-container" data-slide-index="0">
+                        <div class="slides-wrapper flex w-full h-full transition-transform duration-500 ease-in-out">
+                            <div class="slide min-w-full h-full overflow-hidden">
+                                <img src="./assets/images/BSi.jpg" alt="Project 4" class="w-full h-full object-cover transform hover:scale-110 transition duration-700 ease-in-out cursor-zoom-in">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 bg-white/50 backdrop-blur-sm cursor-default">
+                        <span class="text-sm font-semibold text-primary-light tracking-wider uppercase">SEMINAR & WORKSHOP</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-3 text-primary-dark group-hover:text-primary-light transition duration-300">Flutter Experience 2026</h3>
+                        <p class="text-gray-700 line-clamp-3">Mengikuti seminar lokal kampus BSI SLIPI interkoneksi kampus dan industri bertajuk "Dari Kampus ke Industri Digital: Siapkah Kamu Menjadi Mobile Developer di Era AI?" untuk memahami kesiapan karir, tren industri mobile development, serta integrasi AI dalam ekosistem Flutter.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-primary-dark text-base py-16 px-6 mt-12">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left" data-aos="fade-up">
+            <div class="mb-8 md:mb-0">
+                <h2 class="text-3xl font-bold text-accent mb-2">Mari Berkolaborasi!</h2>
+                <p class="text-base/80">Siap membangun aplikasi yang memberikan dampak nyata bersama.</p>
+            </div>
+            
+            <!-- Social Media Links -->
+            <div class="flex space-x-6">
+                <a href="https://github.com/moqi201/" class="text-2xl text-accent hover:text-white transition duration-300 transform hover:scale-110"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nikitaaidinahidayat" class="text-2xl text-accent hover:text-white transition duration-300 transform hover:scale-110"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/nikihdyt12/" class="text-2xl text-accent hover:text-white transition duration-300 transform hover:scale-110"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:nikihdyt12@gmail.com" class="text-2xl text-accent hover:text-white transition duration-300 transform hover:scale-110"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto mt-12 pt-8 border-t border-primary-light/30 text-center text-sm text-base/60">
+            <p>&copy; <span id="year"></span> Nikita Aidina Hidayat</p>
+        </div>
+    </footer>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom Vanilla JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
